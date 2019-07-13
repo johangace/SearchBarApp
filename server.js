@@ -13,8 +13,6 @@ const axios = require('axios')
 app.get('/api/search/:query', (request, response) => {
   axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${request.params.query}`)
     .then(drinkResponse => response.json(drinkResponse.data))
-    .then(drinkSelection = drinkResponse.data.idDrink)
-    console.log(drinkSelection)
 })
 
 // This gets a list of all the drinks
