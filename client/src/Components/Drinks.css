@@ -1,0 +1,17 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-top: 50px;
+}
+
+#drinks {
+  display: grid;
+  height: 150px;
+  width: auto;
+  border: inset 18px darkgrey;
+  grid-gap: 10px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+
