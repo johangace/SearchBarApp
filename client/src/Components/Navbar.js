@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1,
+    marginLeft: "80px"
   },
 }));
 
@@ -24,17 +25,16 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-        <i 
-        className="fas fa-cocktail fa-2x"
-        style={{marginLeft: "80px;"}}
-        >
-        </i>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h5" className={classes.title}>
+          <i className="fas fa-cocktail fa-2x"></i>
             The Bar Exam
           </Typography>
           <Button 
             color="inherit"
-            style={{marginRight: "80px"}}
+            style={{
+              marginRight: "80px",
+              marginTop: "18px"
+          }}
           >
             Drinks A-Z
           </Button>
