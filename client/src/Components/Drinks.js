@@ -16,11 +16,16 @@ render() {
   return (
     <main id="drinks">
       {this.state.drinks.map((drink, i) => (
+        <div id="positions">
         <img key={i}
         className="drinks"
         src={drink.strDrinkThumb}
         alt="Alcoholic Beverage" 
         />
+        <h3 id="h3">
+          {drink.strDrink}
+        </h3>
+        </div>
       )
         )}
     </main>
