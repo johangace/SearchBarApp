@@ -10,14 +10,14 @@ const axios = require('axios')
 // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
 
 // This gets the list of drinks that match a search based on drink name
-app.get('/api/search/:query', (request, response) => {
-  axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${request.params.query}`)
+app.get('/api/search/', (request, response) => {
+  axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`)
     .then(drinkResponse => response.json(drinkResponse.data))
 })
 
 // This gets a list of all the drinks
-app.get('/api/search/', (request, response) => {
-  axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`)
+app.get('/api/search/:id', (request, response) => {
+  axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${request.params.id}`)
     .then(drinkResponse => response.json(drinkResponse.data))
 })
 
