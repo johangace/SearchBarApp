@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Drinks.css";
 import axios from "axios";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 class Drinks extends Component {
   state = {
@@ -17,16 +17,16 @@ class Drinks extends Component {
   render() {
     return (
       <main id="drinks">
-        {this.state.drinks.map((drink, i) => ( 
+        {this.state.drinks.map((drink, i) => (
           <Link key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
-          <div id="positions" key={i}>
-            <img
-              className="drinks"
-              src={drink.strDrinkThumb}
-              alt="Alcoholic Beverage"
-            />
-            <h3 id="h3">{drink.strDrink}</h3>
-          </div>
+            <div id="positions" key={i}>
+              <img
+                className="drinks"
+                src={drink.strDrinkThumb}
+                alt="Alcoholic Beverage"
+              />
+              <h3 id="h3">{drink.strDrink}</h3>
+            </div>
           </Link>
         ))}
       </main>

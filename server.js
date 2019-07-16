@@ -16,10 +16,12 @@ app.get('/api/search/:drinkName', (request, response) => {
 })
 
 // This gets a list of all the drinks
-app.get('/api/search/:id', (request, response) => {
+app.get('/api/one/:id', (request, response) => {
   axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${request.params.id}`)
+
     .then(drinkResponse => response.json(drinkResponse.data))
 })
+
 app.get('/api/all/', (request, response) => {
   axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`)
     .then(drinkResponse => response.json(drinkResponse.data))

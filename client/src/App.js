@@ -21,7 +21,7 @@ class App extends React.Component {
       <Navbar/>
           <Route path="/" component={DrinkForm}/>
           <Route path="/AllDrinks" component={Drinks}/>
-          <Route path="/Detailed" component={Detailed}/>
+          <Route path="/Detailed/:id" component={Detailed}/>
       </BrowserRouter>
     );
   }
