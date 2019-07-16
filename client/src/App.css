@@ -1,15 +1,25 @@
-/* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
 
-#demo{
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+ h2 {
+  margin: 50px;
+  display: flex;
 }
 
-#demo h1{
-  display: grid;
-  place-items: center;
+input {
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  width: 550px;
+  height: 35px;
+  margin: 30px;
+  border-style: outset;
+  background-image: url("glass.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: white;
+  background-size: 20px;
+  outline: none;
+  box-shadow: 1px 2px 1px lightgray;
 }
 
-/* END DEMO */
+

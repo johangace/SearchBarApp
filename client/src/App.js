@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import DrinkForm from "./Components/DrinkForm";
 
 class App extends React.Component {
   state = { serverMessage: "" };
@@ -11,7 +12,12 @@ class App extends React.Component {
   }
 
   render() {
-    return <div id="drinks" />;
+    return (
+      <div id="demo">
+        <DrinkForm />
+        {/* <Display drink= {this.state.drinkData }/> */}
+      </div>
+    );
   }
 }
 
