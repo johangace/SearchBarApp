@@ -1,6 +1,4 @@
-
-
- h2 {
+h2 {
   margin: 50px;
   display: flex;
 }
@@ -21,5 +19,4 @@ input {
   outline: none;
   box-shadow: 1px 2px 1px lightgray;
 }
-
 
