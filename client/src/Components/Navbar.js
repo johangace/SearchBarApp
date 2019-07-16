@@ -27,7 +27,7 @@ export default function ButtonAppBar() {
         <Toolbar>
           <Typography variant="h5" className={classes.title}>
           <i className="fas fa-cocktail fa-2x"></i>
-            The Bar Exam
+            SearchBar
           </Typography>
           <Button 
             color="inherit"

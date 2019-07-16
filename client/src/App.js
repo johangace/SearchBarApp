@@ -13,6 +13,7 @@ class App extends React.Component {
 
   render(){
     return (
+      // This shows how to render the Navbar component named ButtonAppBar
       <div id="demo">
         <ButtonAppBar />
       </div>
