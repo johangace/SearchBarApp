@@ -16,7 +16,7 @@ class Detailed extends React.Component {
   }
 
   componentDidMount(){
-    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11021`)
+    axios.get(`/api/one/${this.props.idDrink}`)
       .then(response => this.setState({ drink: response.data.drinks[0] || {} }))
   }
 
