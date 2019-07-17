@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import { Link } from "react-router-dom"
 
 
 class DrinkForm extends React.Component {
@@ -34,12 +34,12 @@ class DrinkForm extends React.Component {
           
         <div id="drinks">  
           {this.state.drinkData.map((drink,i) => (
-          // <Link key={drink.idDrink} to={`${drink.idDrink}`}>
+           <Link key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
               <div key={i} className="drink"> 
                 <h3>{drink.strDrink}</h3>
                 <img src={drink.strDrinkThumb} alt="cocktail"/> 
               </div>
-            // </Link> //connect
+          </Link>
           ))}
         </div> 
       </> 
