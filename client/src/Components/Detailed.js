@@ -8,9 +8,9 @@ class Detailed extends React.Component {
     let { drink } = this.state;
     let list = [];
     for (let i = 1; i < 16; i++) {
-      if (drink["strMeasure" + i].trim() && drink["strIngredient" + i].trim()) {
+      if (drink["strMeasure" + i] && (drink["strMeasure" + i].trim() && drink["strIngredient" + i].trim())) {
         list.push(
-          <li>{`${drink["strMeasure" + i]} of ${
+          <li key={i}>{`${drink["strMeasure" + i]} of ${
             drink["strIngredient" + i]
           }`}</li>
         );
