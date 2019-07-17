@@ -11,12 +11,12 @@ class DrinkForm extends React.Component {
 
   getDrink= event => {
     const drink = event.target.value
-    if(event.target.value){
-    event.preventDefault();  
+    if(drink && drink.length >=3) {
+    event.preventDefault();
     axios.get(`/api/search/${drink}`)
         .then(response => this.setState({drinkData: response.data.drinks || [] }))
         //.then(response => console.log(response.data))
-    }
+    } else this.setState({ drinkData: [] })
   }
 
   render(){

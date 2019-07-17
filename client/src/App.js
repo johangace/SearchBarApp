@@ -5,12 +5,14 @@ import Drinks from "./Components/Drinks";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Detailed from './Components/Detailed';
 import Navbar from './Components/Navbar'
+import SurpriseMe from "./Components/SurpriseMe";
 
 
 class App extends React.Component {
 
   render() {
     return (
+     
       <BrowserRouter>
       <Navbar/>
         <Switch>
@@ -18,6 +20,7 @@ class App extends React.Component {
           <Route exact path="/AllDrinks" component={Drinks}/>
           <Route path="/Detailed/:id" component={Detailed}/>
         </Switch>
+        <SurpriseMe/>
       </BrowserRouter>
     );
   }
