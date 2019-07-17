@@ -1,24 +1,24 @@
 import React from "react";
 import "./App.css";
 import DrinkForm from "./Components/DrinkForm";
-import Drinks from "./Components/Drinks"
-import Detailed from "./Components/Detailed"
-import ButtonAppBar from './Components/Navbar';
+import Drinks from "./Components/Drinks";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Detailed from './Components/Detailed';
+import Navbar from './Components/Navbar'
+
 
 class App extends React.Component {
-  state = { serverMessage: "" };
 
   render() {
     return (
-      // This shows how to render the Navbar component named ButtonAppBar
-      <div id="demo">
-        <ButtonAppBar />
-        <DrinkForm />
-        <Drinks />
-        <Detailed idDrink="17199"/>
-        {/* <Display drink= {this.state.drinkData }/> */}
-
-      </div>
+      <BrowserRouter>
+      <Navbar/>
+        <Switch>
+          <Route exact path="/" component={DrinkForm}/>
+          <Route exact path="/AllDrinks" component={Drinks}/>
+          <Route path="/Detailed/:id" component={Detailed}/>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

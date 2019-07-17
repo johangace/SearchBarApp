@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { NavLink } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -29,6 +30,7 @@ export default function ButtonAppBar() {
           <i className="fas fa-cocktail fa-2x"></i>
             SearchBar
           </Typography>
+        <NavLink exact to="/AllDrinks">
           <Button 
             color="inherit"
             style={{
@@ -38,6 +40,7 @@ export default function ButtonAppBar() {
           >
             Drinks A-Z
           </Button>
+          </NavLink>
         </Toolbar>
       </AppBar>
     </div>
