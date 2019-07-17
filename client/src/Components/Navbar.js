@@ -27,8 +27,10 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h5" className={classes.title}>
-          <i className="fas fa-cocktail fa-2x"></i>
-            SearchBar
+          <NavLink exact to="/">
+            <i className="fas fa-cocktail fa-2x"></i>
+              SearchBar
+          </NavLink>
           </Typography>
         <NavLink exact to="/AllDrinks">
           <Button 
