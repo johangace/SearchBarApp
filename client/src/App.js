@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Detailed from './Components/Detailed';
 import Navbar from './Components/Navbar'
 
-
 class App extends React.Component {
 
   render() {
