@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom"
 
-
 class DrinkForm extends React.Component {
 
   state = {
@@ -19,10 +18,13 @@ class DrinkForm extends React.Component {
     } else this.setState({ drinkData: [] })
   }
 
+
+
   render(){
     return(
-      <>
-        <h2>What's your drink?</h2>
+     
+      <div id="front">
+        <h2>What would you like to drink?</h2>
         <br></br>
           <input 
             placeholder="Search Drink"
@@ -31,6 +33,7 @@ class DrinkForm extends React.Component {
             autoComplete="off"
             onChange={this.getDrink} 
             /> 
+            <Link to = "/Surprise">Surprise Me!</Link>
           
         <div id="drinks">  
           {this.state.drinkData.map((drink,i) => (
@@ -41,10 +44,11 @@ class DrinkForm extends React.Component {
               </div>
           </Link>
           ))}
+          
         </div> 
-      </> 
+      </div>
     )
-  }  
+   }
 }
 
 

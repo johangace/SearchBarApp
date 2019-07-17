@@ -9,19 +9,12 @@ class SurpriseMe extends React.Component {
     drink: {}
   }
 
-  getRandom= event => {
-    //const drink = event.target.value
-    //if(drink) {
-    event.preventDefault();  
+  componentDidMount = ()=> {
     axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
         .then(response =>{
-          this.setState({drink: response.data.drinks[0]|| [] })
-          //console.log(response.data)
+          this.setState({drink: response.data.drinks[0]|| [] })  
          })
   }
-        
-    //this.setState({ random: [] })
-  
 
     showIngredients = () => {
       let { drink } = this.state;
@@ -42,15 +35,6 @@ class SurpriseMe extends React.Component {
     let {drink}= this.state
     return(
       <>
-        
-        <br></br>
-          <button 
-            name= "Surprise Me!"
-            // name="nameOfDrink" 
-            type="submit"
-            onClick={this.getRandom} 
-           >Surprise Me! </button>
-
       {
         Object.keys(drink).length > 0 && 
       
