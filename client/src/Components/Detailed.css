@@ -1,13 +1,13 @@
 #Detailed body {
-  background-color: #d7ccc8;
+  background-color: #424242;
 }
 #detailed {
-display: grid;
-grid-template-columns: 1fr 1fr;
-margin-top: 3%;
-place-items: center;
-background-color: #d7ccc8;
-padding: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3%;
+  place-items: center;
+  background-color: #d7ccc8;
+  padding: 3%;
 }
 
 #detailed img {
@@ -19,6 +19,8 @@ padding: 3%;
   width: 50%;
   text-align: center;
   list-style: none;
+  line-height: 35px;
+  margin:  0 auto;
 }
 #recipe p {
   font-size: 1.2rem;
@@ -26,6 +28,7 @@ padding: 3%;
 
 #recipe h4 {
   font-size: 1.15rem;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 950px) {
@@ -33,16 +36,19 @@ padding: 3%;
     width: 325px;
     height: auto;
   }
-  #recipe {
+
+#recipe {
     width: 65%;
 }
 
 #recipe h1 {
   font-size: 1.1rem;
 }
+
 #recipe h4 {
   font-size: 1rem;
 }
+
 }
 
   @media screen and (max-width: 700px) {

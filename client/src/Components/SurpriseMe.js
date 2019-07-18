@@ -10,7 +10,7 @@ class SurpriseMe extends React.Component {
   }
 
   componentDidMount = ()=> {
-    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+    axios.get(`/api/random/`)
         .then(response =>{
           this.setState({drink: response.data.drinks[0]|| [] })  
          })
