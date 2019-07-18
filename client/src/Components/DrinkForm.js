@@ -1,11 +1,15 @@
+import React from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import "./DrinkForm.css";
 import React from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom"
 
 class DrinkForm extends React.Component {
-
   state = {
     drinkData: []
+
   }
 
   getDrink= event => {
@@ -33,6 +37,7 @@ class DrinkForm extends React.Component {
             onChange={this.getDrink} /> 
             
             <Link id="surprise" to = "/Surprise">Surprise Me!</Link>
+
           
         <div id="drinks">  
           {this.state.drinkData.map((drink,i) => (
@@ -50,6 +55,4 @@ class DrinkForm extends React.Component {
    }
 }
 
-
-
-export default DrinkForm
+export default DrinkForm;
