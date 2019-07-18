@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -41,26 +42,71 @@
 #front {
   display: grid;
   place-items: center;
+  text-decoration: none;
+  
 }
 
 h2 {
-  font-size: 50px;
- 
+  margin-top: 50px;
+  font-size: 2rem;
+  color: black;
+}
+
+input {
+  border: 3px solid lightgray; 
+  height: 60px;
+  width: 55%;
+  padding: 15px;
+  background: rgba(255,255,255,0.5);
+  margin: 0 0 10px 0;
+font-size: 20px;
+outline: none;
+border-radius: 22px;
+background: url("search.png") no-repeat scroll 7px 7px;
+background-size: 25px;
+background-position: 10px;;
+padding-left: 40px;
+}
+
+input:hover {
+  
+  width: 56%;
 }
 
 
-#front input {
+#surprise{
+  margin-top: 10px;
+ height: 50px;
+  width: 25%;
   text-align: center;
-  font-family: sans-serif;
-  width: 77vh;
-  height: 35px;
-  margin: 30px;
-  border-style: outset;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-color: white;
-  background-size: 20px;
-  outline: none;
-  box-shadow: 1px 2px 1px lightgray;
+  display: grid;
+  place-items: center;
+  background-color: lightgray;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border-radius: 22px;
+  font-size: 20px;
+}
+#surprise:hover {
+  height: 53px;
+  width: 26%;
+
+}
+ link {
+  text-decoration: none;
+  
 }
 
+#drinks {
+  display: grid;
+  width: 150px;
+}
+
+
+ 
+  @media screen and (max-width: 700px) {
+    #surprise {
+      font-size: 13px;
+    }
+  }
