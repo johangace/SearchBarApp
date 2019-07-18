@@ -29,17 +29,17 @@ class Detailed extends React.Component {
     const { drink } = this.state;
     return (
       <div id="detailed">
-        <img height="200px" src={drink.strDrinkThumb} alt="fancydrink" />
-        <h3>{drink.strDrink}</h3> {/*Drink name */}
+    <img height="200px" src={drink.strDrinkThumb} alt="fancydrink" /> 
+    <span id="recipe"><h1>{drink.strDrink}</h1> {/*Drink name */}
         <hr />
         <p>{drink.strGlass}</p> {/*Drink glass */}
         <hr />
         {drink.idDrink && this.showIngredients()}
         {/* Map of the drink will return <li>{drink measurement} {matching drink ingredient}</li> */}
         <hr />
-        <p>{drink.strInstructions}</p> {/*Drink instructions */}
-        <hr />
-        <h4>Enjoy!</h4>
+        <p>{drink.strInstructions}</p> {/*Drink instructions */} 
+        <h4>Enjoy!</h4> 
+        </span>
       </div>
     );
   }

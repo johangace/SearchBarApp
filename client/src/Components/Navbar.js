@@ -24,15 +24,24 @@ export default function ButtonAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static"
+       style={{
+        textDecoration: "none",
+        backgroundColor: "black"}}>
+        <Toolbar > 
           <Typography variant="h5" className={classes.title}>
-          <NavLink exact to="/">
+          <NavLink exact to="/"
+          style={{
+            textDecoration: "none",
+            color: "white"}}>
             <i className="fas fa-cocktail fa-2x"></i>
               SearchBar
           </NavLink>
           </Typography>
-        <NavLink exact to="/AllDrinks">
+        <NavLink exact to="/AllDrinks"
+         style={{
+          textDecoration: "none",
+          color: "white"}}>
           <Button 
             color="inherit"
             style={{

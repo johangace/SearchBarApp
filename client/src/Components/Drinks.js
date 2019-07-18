@@ -18,14 +18,16 @@ class Drinks extends Component {
     return (
       <main id="drinks">
         {this.state.drinks.map((drink, i) => (
-          <Link key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
+          <Link className="pagelink" key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
             <div id="positions" key={i}>
               <img
                 className="drinks"
                 src={drink.strDrinkThumb}
                 alt="Alcoholic Beverage"
               />
-              <h3 id="h3">{drink.strDrink}</h3>
+              <div className="namebox">
+              {drink.strDrink}
+              </div>
             </div>
           </Link>
         ))}
