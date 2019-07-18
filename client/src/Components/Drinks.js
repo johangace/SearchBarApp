@@ -16,7 +16,7 @@ class Drinks extends Component {
 
   render() {
     return (
-      <main id="drinks">
+      <main id="all-drinks">
         {this.state.drinks.map((drink, i) => (
           <Link className="pagelink" key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
             <div id="positions" key={i}>

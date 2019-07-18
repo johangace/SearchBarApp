@@ -23,10 +23,10 @@ class DrinkForm extends React.Component {
 
   render(){
     return(
-      <div id="front">
+      <div className="drinkform-div">
+        <div className="drinkform-input">
         <h2>What would you like to drink? </h2>
           <input id="input"
-           type="text" 
            required
             placeholder=" Search Drink"
             type="search"
@@ -34,6 +34,7 @@ class DrinkForm extends React.Component {
             onChange={this.getDrink}
           />
          <Link id="surprise" to = "/Surprise">Surprise Me!</Link>
+        </div>
           <div id="drinkspics">
             {this.state.drinkData.map((drink, i) => (
               <Link className="moredrinks" key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
@@ -47,9 +48,9 @@ class DrinkForm extends React.Component {
             ))}
           </div>
         </div>
-      </>
     );
   }
+}
 
 
 export default DrinkForm;

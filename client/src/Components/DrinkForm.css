@@ -22,6 +22,11 @@
   height: 500vh;
   opacity: .9;
 }
+.drinkform-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 #drinkpics:hover {
   transform: scale(1.2);
@@ -62,35 +67,32 @@
 
 }
 
-#front {
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-  
-}
-
 h2 {
-  margin-top: 50px;
-  font-size: 2rem;
-  color: black;
+  margin-top: 150px;
+  font-size: 2.5rem;
+  color: white;
 }
 
 input {
-  border: 3px solid lightgray; 
+  border: 3px solid black; 
   height: 60px;
   width: 55%;
   padding: 15px;
   background: rgba(255,255,255,0.5);
-  margin: 0 0 10px 0;
-font-size: 20px;
-outline: none;
-border-radius: 22px;
-background: url("search.png") no-repeat scroll 7px 7px;
-background-size: 25px;
-background-position: 10px;;
-padding-left: 40px;
+  margin: 20px 0 10px 0;
+  font-size: 20px;
+  outline: none;
+  border-radius: 22px;
+  background: url("search.png") no-repeat scroll 7px 7px;
+  background-size: 25px;
+  background-position: 10px;;
+  padding-left: 40px;
+  color: black;
+  filter: invert(1)
 }
-
+input::placeholder{
+  color: black;
+}
 input:hover {
   
   width: 56%;
@@ -99,7 +101,7 @@ input:hover {
 
 #surprise{
   margin-top: 10px;
- height: 50px;
+  height: 50px;
   width: 25%;
   text-align: center;
   display: grid;

@@ -1,4 +1,4 @@
-#drinks {
+#all-drinks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-row-gap: 50px;
@@ -63,5 +63,3 @@ h4 {
   text-decoration: none;
   padding-top: 50px;
 }
-
-
