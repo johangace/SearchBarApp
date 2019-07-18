@@ -2,9 +2,6 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./DrinkForm.css";
-import React from 'react';
-import axios from 'axios';
-import { Link } from "react-router-dom"
 
 class DrinkForm extends React.Component {
   state = {
@@ -34,25 +31,25 @@ class DrinkForm extends React.Component {
             placeholder=" Search Drink"
             type="search"
             autoComplete="off"
-            onChange={this.getDrink} /> 
-            
-            <Link id="surprise" to = "/Surprise">Surprise Me!</Link>
+            onChange={this.getDrink}
+          />
+         <Link id="surprise" to = "/Surprise">Surprise Me!</Link>
+          <div id="drinkspics">
+            {this.state.drinkData.map((drink, i) => (
+              <Link className="moredrinks" key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
+                <div key={i} className="drink">
+                  <img src={drink.strDrinkThumb} alt="cocktail" />
+                  <div className="namebox">
+                    <h3 className="hay3">{drink.strDrink}</h3>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </>
+    );
+  }
 
-          
-        <div id="drinks">  
-          {this.state.drinkData.map((drink,i) => (
-           <Link key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
-              <div key={i} className="drink"> 
-                <h3>{drink.strDrink}</h3>
-                <img src={drink.strDrinkThumb} alt="cocktail"/> 
-              </div>
-          </Link>
-          ))}
-          
-        </div> 
-      </div>
-    )
-   }
-}
 
 export default DrinkForm;
