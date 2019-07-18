@@ -2,6 +2,16 @@
   margin: 0;
   padding: 0;
 }
+
+#drinkspics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+  place-items: center;
+  padding-top: 50px;
+}
+
 .drinkform-div{
   background-image: url("../Images/alcoholbottles.jpg"); 
   background-size: cover;
@@ -12,29 +22,45 @@
   opacity: .9;
 }
 
-/* #drinks{
-  display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-row-gap: 25px;
-  grid-column-gap: 25px;
- } */
-.drink{
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
-  color: white;
+#drinkpics:hover {
+  transform: scale(1.2);
+  z-index: 1;
 }
 
-.hay3{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
+.drink{
+  margin: 0 aut2o;
+  position: relative;
+  text-align: center;
+  color: #d7ccc8;
+  background-color: white;
+  
 }
 
 .drink img{
-  margin: 0 2rem;
-  width: 20rem;
-  border: solid 20px;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.namebox {
+  width: 100px;
+  color: white;
+  text-shadow: black;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  display: inline;
+}
+
+.hay3 {
+  color: grey;
+  width: 200px;
+  margin: 0 auto;
+
+}
+
+.moredrinks {
+
 }

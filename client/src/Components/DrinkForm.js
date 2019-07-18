@@ -34,12 +34,14 @@ class DrinkForm extends React.Component {
             onChange={this.getDrink}
           />
 
-          <div id="drinks">
+          <div id="drinkspics">
             {this.state.drinkData.map((drink, i) => (
-              <Link key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
+              <Link className="moredrinks" key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
                 <div key={i} className="drink">
-                  <h3 className="hay3">{drink.strDrink}</h3>
                   <img src={drink.strDrinkThumb} alt="cocktail" />
+                  <div className="namebox">
+                    <h3 className="hay3">{drink.strDrink}</h3>
+                  </div>
                 </div>
               </Link>
             ))}
