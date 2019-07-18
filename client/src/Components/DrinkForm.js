@@ -24,7 +24,7 @@ class DrinkForm extends React.Component {
     return (
       <>
         <div class="drinkform-div">
-          <h2>What's your drink?</h2>
+          <h2 className="animated fadeInLeft">What's your drink?</h2>
           <br />
           <input
             placeholder="Search Drink"
@@ -38,7 +38,7 @@ class DrinkForm extends React.Component {
             {this.state.drinkData.map((drink, i) => (
               <Link key={drink.idDrink} to={`/Detailed/${drink.idDrink}`}>
                 <div key={i} className="drink">
-                  <h3>{drink.strDrink}</h3>
+                  <h3 className="hay3">{drink.strDrink}</h3>
                   <img src={drink.strDrinkThumb} alt="cocktail" />
                 </div>
               </Link>
