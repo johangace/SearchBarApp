@@ -1,37 +1,69 @@
 #drinks {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  /* grid-template-columns: repeat(5, minmax(100px, 1fr));
-  place-items: center; */
-  
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+  place-items: center;
+  background-color: #424242;
+  padding-top: 50px;
+
 }
 
 .drinks {
   margin-top: 50px;
   height: 200px;
   width: auto;
-  border: inset 18px darkgrey;
   margin-top: 50px;
   cursor: pointer;
+  text-align: center;
 }
 
 
 #positions {
-  position: relative; 
+  position: relative;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: all 0.3s;
+  background-color:#212121;
 }
 
-#h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(18, 19, 18);
-  font-size: 1.5rem;
+#positions:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+h4 {
+  color:#212121;
   font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 1px 1px rgb(248, 242, 242);
+  text-shadow: fafafa;
   cursor: pointer;
+  text-decoration: none;
+  width: 200px;
+  margin-bottom: 5px;
+}
+.pagelink img {
+  margin-top: 0;
+  height: 100%;
+  width: 100%;
+
+}
+.namebox {
+  width: auto;
+  text-align: center;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: black;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 5px;
+  border-top: 5px solid #212121;
+  font-size: 1.5rem;
+
+}
+.pagelink {
+  text-decoration: none;
+  padding-top: 50px;
 }
 
 
