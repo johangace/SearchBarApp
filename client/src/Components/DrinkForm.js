@@ -1,11 +1,15 @@
+import React from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import "./DrinkForm.css";
 import React from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom"
 
 class DrinkForm extends React.Component {
-
   state = {
     drinkData: []
+
   }
 
   getDrink= event => {
@@ -27,10 +31,12 @@ class DrinkForm extends React.Component {
         <h2>What would you like to drink?</h2>
         <br></br>
           <input 
+
             placeholder="Search Drink"
-            // name="nameOfDrink" 
+            // name="nameOfDrink"
             type="search"
             autoComplete="off"
+
             onChange={this.getDrink} 
             /> 
             <Link to = "/Surprise">Surprise Me!</Link>
@@ -51,6 +57,4 @@ class DrinkForm extends React.Component {
    }
 }
 
-
-
-export default DrinkForm
+export default DrinkForm;
