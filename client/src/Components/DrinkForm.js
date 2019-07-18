@@ -22,18 +22,17 @@ class DrinkForm extends React.Component {
 
   render(){
     return(
-     
       <div id="front">
-        <h2>What would you like to drink?</h2>
-        <br></br>
-          <input 
-            placeholder="Search Drink"
-            // name="nameOfDrink" 
+        <h2>What would you like to drink? </h2>
+          <input id="input"
+           type="text" 
+           required
+            placeholder=" Search Drink"
             type="search"
             autoComplete="off"
-            onChange={this.getDrink} 
-            /> 
-            <Link to = "/Surprise">Surprise Me!</Link>
+            onChange={this.getDrink} /> 
+            
+            <Link id="surprise" to = "/Surprise">Surprise Me!</Link>
           
         <div id="drinks">  
           {this.state.drinkData.map((drink,i) => (

@@ -7,6 +7,8 @@ import Detailed from './Components/Detailed';
 import Navbar from './Components/Navbar'
 import SurpriseMe from "./Components/SurpriseMe";
 import "./Components/DrinkForm.css";
+import "./Components/Detailed.css";
+
 
 class App extends React.Component {
 
