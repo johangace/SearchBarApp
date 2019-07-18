@@ -2,9 +2,6 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./DrinkForm.css";
-import React from 'react';
-import axios from 'axios';
-import { Link } from "react-router-dom"
 
 class DrinkForm extends React.Component {
   state = {
@@ -53,7 +50,6 @@ class DrinkForm extends React.Component {
       </>
     );
   }
-=======
 
 
 export default DrinkForm;
